@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>webapi中的类库到底是什么</title>
+</head>
+<body>
+
+    <h1 id="webapi">webapi中的类库到底是什么</h1>
+<ol>
+<li><p>Antlr3.Runtime.dll</p>
+<ol>
+<li>Antlr的程序集。Antlr（ANother Tool for Language Recognition）是一个工具。</li>
+<li>它为我们构造自己的识别器（recognizers）、编译器（compiler）和转换器（translators）提供了一个基础。</li>
+<li>通过定义自己的语言规则，Antlr可以为我们生成相应的语言解析器，这样便可以省却了自己全手工打造的劳苦。</li>
+<li>扩展：<a style="color:red;" href="https://stackoverflow.com/questions/7177606/when-do-we-use-antlr" target="_blank">When do we use ANTLR</a>
+<ol>
+<li>You would need these dll's if you are parsing any text at runtime using an antlr grammar</li>
+<li>Typically there are two steps.</li>
+<li>run the java antlr parser over your .g files to generate a C# lexer, C# grammar and possibly C# tree walkers.</li>
+<li>Build those files into your application. Those files will work in conjunction with the antlr.runtime dll, or antlr3.runtime dll if you're using ANTLR version 3.</li>
+<li>Your C# program can now parse text files using the grammar that you compiled in step 1.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Microsoft.AI.Agent.Intercept.dll                不清楚，怀疑和microsoft ai有关</p>
+</li>
+<li><p>Microsoft.AI.DependencyCollector.dll</p>
+</li>
+<li><p>Microsoft.AI.PerfCounterCollector.dll</p>
+</li>
+<li><p>Microsoft.AI.ServerTelemetryChannel.dll</p>
+</li>
+<li><p>Microsoft.AI.Web.dll</p>
+</li>
+<li><p>Microsoft.AI.WindowsServer.dll                  同上</p>
+</li>
+<li><p>Microsoft.ApplicationInsights.dll</p>
+<ol>
+<li>应用程序监控</li>
+<li>第一次知道，只有深入去整理才能发现，要么去看理论书</li>
+<li>相关文章：采用 Application Insights 进行新一代开发</li>
+</ol>
+</li>
+<li><p>Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</p>
+<ol>
+<li>CodeDom是一种动态代码生成的技术</li>
+<li>对象可以是多种语言  还有个同类技术T4 估计不少人知道</li>
+<li>这个类库明显是用于DoNet编译</li>
+</ol>
+</li>
+<li><p>Microsoft.CSharp</p>
+<ol>
+<li>C#必备类库</li>
+<li>运行时编译类库 和dymanic等配合使用</li>
+<li>Microsoft.Web.Infrastructure.dll</li>
+<li>官方给予了解释</li>
+<li>This package contains the Microsoft.Web.Infrastructure assembly that lets you dynamically register HTTP modules at run time.</li>
+<li>在运行时动态注册Http modules</li>
+</ol>
+</li>
+<li><p>Newtonsoft.Json.dll</p>
+<ol>
+<li>json序列化类库</li>
+</ol>
+</li>
+<li><p>System</p>
+<ol>
+<li>系统类库 不解释</li>
+</ol>
+</li>
+<li><p>System.ComponentModel.DataAnnotations.dll</p>
+<ol>
+<li>为实体类定义元数据的特性类</li>
+<li>StringLengthAttribute等</li>
+<li>System.Configuration.dll</li>
+<li>多用于读取web/app.config</li>
+</ol>
+</li>
+<li><p>System.Core</p>
+</li>
+<li><p>System.Data.dll</p>
+</li>
+<li><p>System.Data.DataSetExtensions</p>
+</li>
+<li><p>System.Drawing</p>
+<ol>
+<li>绘图，顺带上面的类库不解释</li>
+</ol>
+</li>
+<li><p>System.Net.Http.dll</p>
+<ol>
+<li>为HTTP 应用程序提供一种编程接口</li>
+</ol>
+</li>
+<li><p>System.Net.Http.Formatting.dll</p>
+<ol>
+<li>采用基于所请求媒体类型的格式来序列化和反序列化 HTTP 消息正文</li>
+</ol>
+</li>
+<li><p>System.Net.Http.WebRequest</p>
+<ol>
+<li>Provides desktop-specific features not available to Windows Store apps or other environments</li>
+<li>微软提供了中文注解：提供了特定于桌面的功能不可用的 Windows 应用商店应用程序或其他环境</li>
+<li>不理解 唯一可以知道的这个类库下只有一个类 ：System.Net.Http.WebRequestHandler</li>
+<li>命名空间居然是System.Net.Http，后续有必要调查下为什么微软独立一个这样的类库,也许真如描述那样：specific</li>
+</ol>
+</li>
+<li><p>System.Runtime.Serialization.dll</p>
+<ol>
+<li>对象序列化和反序列化的类</li>
+</ol>
+</li>
+<li><p>System.Web.dll</p>
+<ol>
+<li>官方描述：</li>
+<li>This namespace includes the HttpRequest class,</li>
+<li>which provides extensive information about the current HTTP request;</li>
+<li>the HttpResponse class, which manages HTTP output to the client;</li>
+<li>and the HttpServerUtility class, which provides access to server-side utilities and processes.</li>
+<li>System.Web 命名空间提供类和接口，使浏览器 / 服务器通信</li>
+<li>此命名空间包括 HttpRequest 类，该类提供当前 HTTP 请求</li>
+<li>有关的大量信息 HttpResponse 类，该类管理 HTTP 输出到客户端，</li>
+<li>则与 HttpServerUtility 类，该类提供对服务器端实用程序和进程的访问</li>
+<li>System.Web 此外包括用于 cookie 管理、 文件传输、 异常信息和输出缓存控制类。</li>
+</ol>
+</li>
+<li><p>System.Web.Abstractions.dll</p>
+<ol>
+<li>神坑  <sup>_</sup> 所以这是一个空的类库，但是似乎还不能脱离 ，考虑下为什么？</li>
+<li>此程序集中的类型已移动到 ASP.NET 4 的 System.Web.dll 中。</li>
+<li>还有一个同样的类库：System.Web.Routing.dll</li>
+<li>相关文章</li>
+<li>System.Web.ApplicationServices</li>
+<li>The System.Web.ApplicationServices namespace provides classes that</li>
+<li>enable you to access ASP.NET forms authentication, roles,</li>
+<li>and profiles application services as Windows Communication Foundation (WCF) services.</li>
+<li>ASP.NET  技术的权限验证等等。</li>
+</ol>
+</li>
+<li><p>System.Web.Entity</p>
+<ol>
+<li>对实体框架的核心功能的访问的类</li>
+<li>说穿了就是支持EntityFramework的东西</li>
+</ol>
+</li>
+<li><p>System.Web.Helpers.dll
+早期asp.net留下来的一些帮助类</p>
+<ol>
+<li>涉及恶意脚本，javascript 数组对象，邮件发送，缓存 等等。</li>
+</ol>
+</li>
+<li><p>System.Web.Http.dll</p>
+<ol>
+<li>System.Web.Http 命名空间包含 HTTP 特性的类。</li>
+<li>说穿了都是定义一些Http有关的类，他们继承自Attribute</li>
+<li>HttpPostAttribute 眼熟不？  [HttpPost] 这样呢？</li>
+</ol>
+</li>
+<li><p>System.Web.Http.WebHost.dll</p>
+<ol>
+<li>包含与 Web 托管相关的类。</li>
+<li>指运行程序的容器有关的类（IIS就是一种容器）</li>
+</ol>
+</li>
+<li><p>System.Web.Mvc.dll</p>
+<ol>
+<li>System.Web.Mvc 命名空间包含一些类和接口，它们支持用于创建 Web 应用程序的 ASP.NET 模型视图控制器 (MVC) 框架。</li>
+<li>该命名空间包含表示控制器、控制器工厂、操作结果、视图、分部视图以及模型联编程序等的类。</li>
+</ol>
+</li>
+<li><p>System.Web.Optimization.dll</p>
+<ol>
+<li>优化js和css文件 主要做压缩</li>
+</ol>
+</li>
+<li><p>System.Web.Razor.dll</p>
+<ol>
+<li>razor语法相关</li>
+</ol>
+</li>
+<li><p>System.Web.Routing.dll</p>
+<ol>
+<li>上面已经解释</li>
+</ol>
+</li>
+<li><p>System.Web.WebPages.Deployment.dll</p>
+<ol>
+<li>Web 应用程序部署的类</li>
+<li>为预启动代码提供注册点  <a style="color:red;" href="https://msdn.microsoft.com/zh-cn/library/system.web.webpages.deployment.preapplicationstartcode(v=vs.111).aspx" target="_blank">PreApplicationStartCode</a></li>
+</ol>
+</li>
+<li><p>System.Web.WebPages.dll</p>
+<ol>
+<li>呈现和执行使用 ASP.NET Web Pages with Razor Syntax 构建的页</li>
+</ol>
+</li>
+<li><p>System.Web.WebPages.Razor.dll</p>
+<ol>
+<li>仅供内部使用，不能在代码中直接调用的类。 厉害了</li>
+</ol>
+</li>
+<li><p>System.Xml</p>
+</li>
+<li><p>System.Xml.Linq</p>
+</li>
+<li><p>WebGrease.dll</p>
+<ol>
+<li>WebGrease is a suite of tools for optimizing javascript, css files and images.</li>
+<li>作用很明显，压缩js css 图片文件。 配和上面的一些类库一起使用的。</li>
+<li>网站： <a href="http://webgrease.codeplex.com/">http://webgrease.codeplex.com/</a></li>
+<li>题外话： codeplex 要shutting down 了，从2006年到现在都已经十年了，2017年12月15号就要关了。</li>
+<li>WebGrease的源代码也就1.0的，从nuget上可以看到经历了1.0，1.1，1.3，1.5.2，1.6相关版本</li>
+<li>WebGrease保存了一份代码，以后观摩。 当然知道我有代码的小伙伴，关服后可以找我要。</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>以上类库基于VS2017 项目选择的是 webapi项目 （默认自带mvc 和api）</p>
+</blockquote>
+
+
+</body>
+</html>

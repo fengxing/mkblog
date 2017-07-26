@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>分布式服务框架第四章:序列化和反序列化</title>
+</head>
+<body>
+
+    <h1 id="section">分布式服务框架第四章:序列化和反序列化</h1>
+<p>这章没太多的东西，涉及序列化和反序列化，因为最近有一些思考，所以暂缓了对块的分享。</p>
+<p>先梳理点概念：</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> 序列化： 我们大多的时候一般指把对象转换成字节的过程，关键词：json xml 二进制等等.</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> 编码：把信息从一种格式转换成另外一种格式。 关键词 utf  unicode 等</li>
+</ul>
+<p>简单的说说区别把：</p>
+<ol>
+<li>序列化不破坏数据本身的内容，不对字节信息加工。编码会的。</li>
+<li>序列化的作用是对象存储居多，编码本身解决文字的问题，如早期的英文和中文的兼容。</li>
+</ol>
+<p>暂时就这样，说的不够全，具体的内容需要靠客官自行深入。</p>
+<p>为什么需要序列化的东西?</p>
+<ol>
+<li>同一的格式，有明确数据定义，比纯文本强多了</li>
+<li>对于非文本返回的内容，一般来说都是为了高性能出现的，例如probuf。 这个东西最近我在思考，例如js端的probuf的使用。</li>
+</ol>
+<p>如何评价序列化的东西?</p>
+<ol>
+<li>生成的速度和暂用的计算机资源（CPU 内存）</li>
+<li>生成的字节流大小</li>
+<li>有好性，可读性</li>
+</ol>
+<blockquote>
+<p>如果要划分一个优先度，那3最优先
+原因在于在于接口报文容易阅读，方便运维介入去排查问题。(单纯技术派 死开！！ :-D)</p>
+<p>留个悬念： 字节流大小真的没办法和可读性并列吗？鱼和熊掌要兼得!</p>
+</blockquote>
+
+
+</body>
+</html>

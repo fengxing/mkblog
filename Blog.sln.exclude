@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C9647DC-BC3A-464F-909A-06AC7CABF30C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Blog", ".", "{74DA68D0-9DE5-420B-BD60-8F8DBFD69E96}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52177"
+		Debug.AspNetCompiler.PhysicalPath = "..\Blog\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52177\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52177"
+		Release.AspNetCompiler.PhysicalPath = "..\Blog\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52177\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52177"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74DA68D0-9DE5-420B-BD60-8F8DBFD69E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DA68D0-9DE5-420B-BD60-8F8DBFD69E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{74DA68D0-9DE5-420B-BD60-8F8DBFD69E96} = {2C9647DC-BC3A-464F-909A-06AC7CABF30C}
+	EndGlobalSection
+EndGlobal
