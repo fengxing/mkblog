@@ -1,0 +1,26 @@
+﻿重新定义webapi
+webapi有什么功能或者说大家如何使用? 
+整理下大概如下:
+1 Http verb,GET, POST, PUT, DELETE的CRUD
+2 Http Status Code表达不同含义
+3 客户端可以通过Accept header来与服务器协商格式(Json Xml)
+4 支持OData
+5 支持Self-host或者IIS host
+6 支持大多数MVC功能
+7 过滤器-异常处理,授权等
+8 一种获取数据的载体(特别适合移动端),前后端分离等。 支持跨域
+其他有意思的应用
+摘自
+Web API 强势入门指南	   http://www.cnblogs.com/guyun/p/4589115.html
+写给新手的WebAPI实践    http://www.cnblogs.com/loogn/p/6275659.html
+其他一些魔性的webapi使用
+WebApi 插件式构建方案（服务化方案）
+http://www.cnblogs.com/lenic/p/4129096.html
+ABP中动态WebAPI原理解析
+http://www.cnblogs.com/1zhk/p/5418694.html
+Web API 接口版本控制 SDammann.WebApi.Versioning
+http://www.cnblogs.com/ideacore/p/6434294.html
+webapi文档描述-swagger  
+http://www.cnblogs.com/yanweidie/p/5709113.html
+
+
