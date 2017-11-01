@@ -1,4 +1,15 @@
-﻿重新定义webapi
+﻿做正确的事之redefine webapi
+
+本文由四个部分组成 
+1 webapi怎么样
+2 我们需要什么样的webapi
+3 按照我们的目标重新定义webapi
+4 重新定义的webapi特性总结和分享 
+
+
+
+
+
 webapi有什么功能或者说大家如何使用? 
 整理下大概如下:
 1 Http verb,GET, POST, PUT, DELETE的CRUD

@@ -1,0 +1,15 @@
+﻿technology roadmap
+不文不讨论为什么使用以下的技术，而是阐述我使用什么样的技术。
+platform : 
+          windows,future support Linux(.net core)
+		  .net framework 4.5 
+		  iis 7.5 or later
+
+database: sqlserver
+
+protocal: http ,future support tcp
+
+api		: webapi
+
+cache   : redis
+
